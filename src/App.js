@@ -8,14 +8,23 @@ import { items } from "./data";
 
 function App() {
   const [itemsData, setitemsData] = useState(items);
+  const Categories = ["all", ...new Set(items.map((i) => i.category))]; // get only unique from duplicated
+  const filterByCategory = (cat) => {
+    if (cat === "all") {
+      setitemsData(items);
+    } else {
+      const newArr = items.filter((item) => item.category === cat);
+      setitemsData(newArr);
+    }
+  };
+
   return (
     <div className="App">
       <MyNavbar />
       <Container>
         <Header />
-        <Category />
-        
-          <ItemsList items={itemsData} />
+        <Category filterByCategory={filterByCategory} Categories={Categories} />
+        <ItemsList items={itemsData} />
       </Container>
     </div>
   );
