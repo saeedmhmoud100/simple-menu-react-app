@@ -1,6 +1,10 @@
+body {
+  background-color: #f8f8f8;
+}
 .underline {
   height: 1px;
   width: 220px;
   border-radius: 10px;
-  border: 1px solid #198754;
+  border: 1px solid rgb(255, 193, 7);
+  /* border: 1px solid #198754; */
 }

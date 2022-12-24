@@ -10,7 +10,7 @@ function MyNavbar() {
     <Navbar bg="dark" expand="lg" variant="dark">
       <Container>
         <Navbar.Brand href="#">
-          <div style={{ color: "#198754" }}>New Restaurant</div>
+          <div className="text-warning">New Restaurant</div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -26,7 +26,7 @@ function MyNavbar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-warning">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
