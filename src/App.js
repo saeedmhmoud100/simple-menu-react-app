@@ -18,9 +18,12 @@ function App() {
     }
   };
 
+  const onSearch = (val) => {
+    setitemsData(items.filter((item) => item.title ===  val));
+  };
   return (
     <div className="App">
-      <MyNavbar />
+      <MyNavbar onSearch={onSearch} />
       <Container>
         <Header />
         <Category filterByCategory={filterByCategory} Categories={Categories} />
