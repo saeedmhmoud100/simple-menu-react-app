@@ -5,10 +5,10 @@ import { Zoom } from "react-reveal";
 function ItemsList({ items }) {
   return (
     <Row>
-      <Zoom right cascade>
-        {items.length > 0 ? (
-          items.map((item) => (
-            <Col sm="12" className="my-1" key={item.id}>
+      {items.length > 0 ? (
+        items.map((item) => (
+          <Col sm="12" className="my-1" key={item.id}>
+            <Zoom right cascade>
               <Card className="d-flex flex-row" style={{ borderRadius: "9px" }}>
                 <Card.Img
                   style={{
@@ -28,12 +28,12 @@ function ItemsList({ items }) {
                   <Card.Text>{item.description}</Card.Text>
                 </Card.Body>
               </Card>
-            </Col>
-          ))
-        ) : (
-          <h2 className="text-center my-2">there is no data!!</h2>
-        )}
-      </Zoom>
+            </Zoom>
+          </Col>
+        ))
+      ) : (
+        <h2 className="text-center my-2">there is no data!!</h2>
+      )}
     </Row>
   );
 }
